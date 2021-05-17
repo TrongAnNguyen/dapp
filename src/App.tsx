@@ -1,12 +1,19 @@
-import React, { lazy } from 'react'
-import SuspenseWithChunkError from './components/SuspenseWithChunkError'
-
-const Home = lazy(() => import('./views/Home'))
+import { Router } from 'react-router-dom'
+import ResetCSS from 'style/ResetCSS'
+import GlobalStyle from 'style/Global'
+import SuspenseWithChunkError from 'components/SuspenseWithChunkError'
+import Routers from 'routers'
+import { memo } from 'react'
+import history from './routerHistory'
 
 const App: React.FC = () => (
-  <SuspenseWithChunkError fallback={null}>
-    <Home />
-  </SuspenseWithChunkError>
+  <Router history={history}>
+    <ResetCSS />
+    <GlobalStyle />
+    <SuspenseWithChunkError fallback={null}>
+      <Routers />
+    </SuspenseWithChunkError>
+  </Router>
 )
 
-export default App
+export default memo(App)

@@ -5,7 +5,7 @@ import { HomeWrapper } from './Home.styled'
 
 const Home = () => {
   const { register, handleSubmit } = useForm()
-  const onSubmit = () => console.log('asdf')
+  const onSubmit = () => null
 
   return (
     <HomeWrapper>

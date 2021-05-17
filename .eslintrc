@@ -14,6 +14,7 @@
   "settings": {
     "import/resolver": {
       "node": {
+        "paths": ["./src"],
         "extensions": [".js", ".ts", ".jsx", ".tsx"]
       }
     },
@@ -42,6 +43,7 @@
     "react/prop-types": 0,
     "react/jsx-props-no-spreading": 0,
     "react/no-multi-comp": 0,
+    "react/react-in-jsx-scope": 0,
     "import/extensions": [
       "error",
       "ignorePackages",
