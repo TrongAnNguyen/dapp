@@ -1,19 +1,12 @@
-import React from 'react'
-import { useForm } from 'react-hook-form'
-import { Input } from '../../components/Input'
-import { HomeWrapper } from './Home.styled'
+import Menu from 'components/Menu'
+// import { Input } from '../../components/Input'
+// import { HomeWrapper } from './Home.styled'
+// hello world
+const Home = () => (
+  // const { register, handleSubmit } = useForm()
+  // const onSubmit = () => null
 
-const Home = () => {
-  const { register, handleSubmit } = useForm()
-  const onSubmit = () => null
-
-  return (
-    <HomeWrapper>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <Input {...register('address')} />
-      </form>
-    </HomeWrapper>
-  )
-}
+  <Menu />
+)
 
 export default Home
